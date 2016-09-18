@@ -1,0 +1,60 @@
+@media only screen and (max-width: 900px) {
+/*Contact page */
+.input input {
+	width: 70%;
+}
+.input textarea {
+	width: 70%;
+}
+.send {
+	width: 70%;
+}
+.contact-but {
+	margin: 5% 0 0 80%;
+}
+.buterbrod a {
+	width: 80%;
+}
+/*Contact page finish*/
+/*One life page*/
+.about-us p {
+	width: 80%;
+}
+.calendar {
+	width: 100%;
+}
+/**/
+
+}
+
+@media only screen and (max-width: 450px) {
+.clarification {
+	display: none;
+}
+.buterbrod {
+	height: 500px;
+}
+.buterbrod a {
+	font-size: 20px;
+}
+.about-us p {
+	width: 100%;
+}
+.about-us a {
+	margin-top: 30px;
+}
+.cont-first p {
+	width: 100%;	
+}
+.back-to {
+	display: none;
+}
+.header {
+	height: 500px;
+	background: url(../img/header.jpg) 50% 50%;
+	background-size: 100% 100%;
+}
+.around {
+	margin-top: 350px;
+}
+}

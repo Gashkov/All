@@ -1,0 +1,217 @@
+/* --------------
+    CSS Reset
+----------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block;}
+ol, ul { list-style: none;}
+blockquote, q { quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none;}
+a:focus { color: #fff;}
+table { border-collapse: collapse; border-spacing: 0;}
+html { height: 100%;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block;}
+body { font-family:'NeutrafaceSlabDisplay-Medium' !important; font: 12px/18px; height: 100%; line-height: 1; min-width: 320px;
+  width: 100%; background: url(../img/backgraund.jpg) no-repeat; background-position: center center; background-attachment: fixed;
+  background-size: cover;}
+.wrapper { max-width: 1170px; margin: 0 auto; min-height: 100%; height: auto;}
+
+/*-------------
+    Header
+--------------*/
+
+.header { height: 200px;}
+.wrap-header strong { font: 0/0 serif; text-shadow: none; color: transparent;}
+.left-header { margin: 30px 0 0 0;}
+.soc { margin-bottom: 30px;}
+.soc li { width: 37px; height: 39px; display: inline-block; margin-right: 15px;}
+.soc a { display: block; width: 37px; height: 39px; text-indent: -9999px;}
+.fs { background: url(../img/fs.png);}
+.mail { background: url(../img/mail.png);}
+.tw { background: url(../img/tw.png);}
+.left-icon { width: 100%; height: 35px; background: url(../img/left-icon.png) 50% 50%; background-size: 100% 100%;}
+.left-icon:hover { transition: 0.5s; background: url(../img/left-icon-hover.png) 50% 50%; background-size: 100% 100%;}
+.right-icon { background: url(../img/right-icon.png) 50% 50%; background-size: 100% 100%;}
+.right-icon:hover { background: url(../img/right-icon-hover.png) 50% 50%; background-size: 100% 100%;}
+.logo { margin-top: 38px;}
+.logo a { display: block;}
+.logo img { margin: 0 auto; display: block;}
+.register { margin: 45px 0 31px 0; text-align: right;}
+.register li { display: inline-block;}
+.register a { color: #fff; display: block;}
+.register li a:focus { color: #c8840c;}
+.register a:hover { color: #fff;}
+.sing-in { width: 25%; background: url(../img/sing-in.png) 50% 50%; background-size: 100% 100%; height: 42px; font-family:'NeutrafaceSlabText-Book';
+  font-size: 16px; text-align: center; padding-top: 10px; margin-left: 29px;}
+.info { font-family:'NeutrafaceSlabText-Book'; font-size: 16px;}
+.reg { width: 25%; background: url(../img/reg-background.png) 50% 50%; background-size: 100% 100%; height: 42px; font-family:'NeutrafaceSlabText-Book';
+  font-size: 16px; text-align: center; padding-top: 10px;}
+.sing-in a { height: 42px;}
+.reg a { height: 42px;}
+
+/*-------------
+    Navigation
+-------------- */
+
+.nav { height: 120px; background: url(../img/nav-border.png) 50% 50%; background-size: 100% 100%; margin-bottom: 40px !important;}
+.navigation { width: 75%; margin: 0 auto; margin-top: 37px;}
+.navigation li { display: inline-block; width: 13.91%; text-align: center; font-family:'NeutrafaceSlabDisplay-Bold'; font-size: 24px;}
+
+/*-----------------
+  Toggle drop menu
+------------------*/
+
+.pizza a { color: #fff !important;}
+.navigation a { color: #c08012;}
+.navigation li a:focus { color: #fff;}
+.navigation a:hover { transition: 0.5s; color: #fff;}
+.size { height: 35px;}
+.crust { height: 35px;}
+/*--------------
+    Middle
+--------------- */
+
+.middle { width: 100%; padding: 0 0 70px; position: relative;}
+.middle:after { display: table; clear: both; content: '';}
+.container { width: 100%; float: left; overflow: hidden;}
+.content { padding: 0 360px 0 0;}
+.title { color: #fff; text-align: left; margin: 0; padding: 0; font-size: 18px; padding-left: 10px;}
+.wrap-choose hr { color: #fff; width: 96%;}
+.more { height: 30px;}
+.more li { display: inline-block;}
+.more a { display: block; width: 151px; height: 30px; background: url(../img/option.png); border-radius: 5px; text-align: center;
+  color: #c38414; padding-top: 5px; font-size: 16px; margin-right: 19px;}
+.last { margin: 0 !important;}
+.more a:hover { transition: 0.5s; background: url(../img/hover-option.png); color: #fff;}
+.more li a:focus { color: #fff;}
+.crust { margin-bottom: 32px;}
+.first{ color: #fefefe; font-size: 24px; padding-left: 16px; width: 12% !important;}
+
+/*----------
+    Goods
+------------*/
+
+.goods-img { height: 200px;}
+.first-goods { background: url(../img/first-goods.png) 50% 50%; background-size: 100% 100%; margin-bottom: 22px; cursor: pointer;}
+.name-goods { font-family:'NeutrafaceSlabText-Book'; font-size: 16px; margin: 0; color: #c8840c; width: 80%; margin-bottom: 15px; cursor: pointer;}
+.description { font-family:'NeutrafaceSlabText-Book'; font-size: 15px; color: #fff;}
+.price { font-family:'NeutrafaceSlabDisplay-Bold'; font-size: 16px; color: #fff; display: block;}
+.wrap-button { margin-top: 20px;}
+.goods-button { display: inline-block; width: 49%; text-align: center; height: 35px; color: #fff; padding-top: 5px;
+  font-family:'NeutrafaceSlabText-Book'; font-size: 16px; text-decoration: none !important;}
+.goods-button:focus { color: #c8840c;}
+.goods-button:hover { transition: 0.5s; color: #c8840c;}
+.add { background: url(../img/button-add.png) 50% 50%; background-size: 100% 100%;}
+.customise { background: url(../img/button-customise.png) 50% 50%; background-size: 100% 100%;}
+.second { background: url(../img/second.png) 50% 50%; background-size: 100% 100%;}
+.third { background: url(../img/third.png) 50% 50%; background-size: 100% 100%;}
+.fourth { background: url(../img/fourth.png) 50% 50%; background-size: 100% 100%;}
+.fifth { background: url(../img/fifth.png) 50% 50%; background-size: 100% 100%;}
+.sixth { background: url(../img/sixth.png) 50% 50%; background-size: 100% 100%;}
+.seventh { background: url(../img/seventh.png) 50% 50%; background-size: 100% 100%;}
+.eighth { background: url(../img/eighth.png) 50% 50%; background-size: 100% 100%;}
+.ninth { background: url(../img/ninth.png) 50% 50%; background-size: 100% 100%;}
+.bottom { width: 100%; margin: 45px 0 20px 0;}
+
+/*------------
+    Basket
+--------------*/
+
+.right-sidebar { float: left; width: 368px; margin-left: -370px; position: relative; height: auto;}
+.basket { border: 1px solid #cad0d5; border-radius: 5px; margin-top: 40px; height: auto; margin-bottom: 20px;}
+.basket-title{ font: 24px 'NeutrafaceSlabText-Book'; color: #fff;}
+.basket-title img{ vertical-align: sub;}
+
+/*------------
+  table section 
+--------------*/
+
+.table img { cursor: pointer;}
+.table{ border: 0; color: #fff;}
+.table th, .table td { border-top: none !important; border-bottom: none !important;}
+.one-title { font: 18px 'NeutrafaceSlabText-Book';}
+.underline-title { text-decoration: underline;}
+.two-title{ font: 14px 'NeutrafaceSlabText-Book'; color: #5a626b;}
+.fa-minus-circle { color: #ef5350;}
+
+/*-----------
+  two buttons
+-------------*/
+
+.left-basket-button { display: flex; justify-content: center; align-items: center;}
+.right-basket-button { display: flex; justify-content: center; align-items: center;}
+.left-basket-button button { margin-left: -10%; padding: 0 30%; height: 34px; background-color: #162534; border: none; border-radius: 5px;
+  font: 16px 'NeutrafaceSlabDisplay-Medium'; color: #fff;}
+.right-basket-button button { margin-right: -1%; padding: 0 30%; height: 34px; background-color: #304150; border: none; border-radius: 5px;
+  font: 16px 'NeutrafaceSlabDisplay-Medium'; color: #c28313;}
+
+/*-------------
+  dropdown part 
+---------------*/
+
+.dropdown { padding: 1% 0 !important;}
+.dropdown button { background-color: #172a3b !important;}
+.dropdown span { display: flex; justify-content: flex-start; font: 16px 'NeutrafaceSlabDisplay-Medium'; color: #5a626b;}
+.menu-down { background: url(../img/menu-down-icon.png) no-repeat; margin-top: -4%; width: 10px; height: 6px;}
+.dropdown-menu { background-color: #172a3b !important; width: 100%;}
+.dropdown-menu li a { font: 16px 'NeutrafaceSlabDisplay-Medium' !important; color: #5a626b !important;}
+.sum { display: flex; flex-direction: column; justify-content: center;}
+.sum h3 { font: 26px 'NeutrafaceSlabDisplay-Bold'; color: #fff; margin-top: 0;}
+.sum p { padding-top: 2%; font: 14px 'NeutrafaceSlabText-Book'; color: #5a626b !important;}
+.order-now { background: url(../img/order-now.png) 50% 50%; background-size: 100% 100%; width: 50%; height: 53px; margin: 0 auto;
+  font-family:'NeutrafaceSlabText-Book'; font-size: 24px; color: #fff; padding-top: 6px; text-decoration: none !important;}
+.order-now:hover { color: #f49a00;}
+.dropdown button { background: none !important;}
+.coupon a { padding-top: 5%; display: flex; justify-content: center; align-items: center; color: #9d9d9d;}
+.coupon a:hover { color: #fff;}
+
+/*----------------
+  info-block section 
+------------------*/
+
+.info-basket { height: 130px; margin: 0; border: 1px solid #fff; border-radius: 6px;}
+.info-box{ display: -webkit-box; display: flex; -webkit-justify-content; justify-content: center; -webkit-align-items: center;
+  align-items: center; margin-top: 8%; -webkit-margin-left: 10%;}
+.info-box a{ padding-right: 4%; align-self: center;}
+.info-box p{ width: 65%; align-self: center; font: 18px 'NeutrafaceSlabText-Book'; color: #fff;}
+
+/*--------
+  Footer
+---------*/
+
+.footer { margin: -100px auto 0; min-width: 320px; max-width: 1920px; height: 100px; position: relative; margin-top: 0;}
+.social { width: 50%; margin: 0 auto;}
+.wrap-social li { display: inline-block; height: 64px;}
+.wrap-social a { display: block; height: 64px; font-family:'NeutrafaceSlabText-Book'; font-size: 24px; padding-top: 45px;
+  color: #fff; text-decoration: none !important;}
+.wrap-social a:hover { transition: 0.5; color: #fff;}
+.wrap-social li a:focus { color: #fff;}
+.facebook { background: url(../img/twitt.png) 50% 0px no-repeat;}
+.facebook:hover { transition: 0.7s; background: url(../img/twitt-hover.png) 50% 0px no-repeat;}
+.twitter { background: url(../img/contact.png) 50% 0px no-repeat;}
+.twitter:hover { transition: 0.7s; background: url(../img/contact-hover.png) 50% 0px no-repeat;}
+.carrot { background: url(../img/carrot.png) 50% 0px no-repeat;}
+.carrot:hover { transition: 0.7s; background: url(../img/carrot-hover.png) 50% 0px no-repeat;}
+.tree { background: url(../img/tree.png) 50% 0px no-repeat;}
+.tree:hover { transition: 0.7s; background: url(../img/tree-hover.png) 50% 0px no-repeat;}
+.bottom-footer { margin: 0 auto; text-align: center; margin-top: 40px; margin-bottom: 40px;}
+.bottom-footer a{ display: block; color: #fff;}
+.bottom-footer li a:hover { transition: 0.7s; color: #c08012;}
+.trademark-footer a{ margin-top: -4%; display: block; color: #fff;}
+.trademark-footer a span{ vertical-align: text-bottom;}
+.trademark-footer li a:hover{ transition: 0.7s; color: #c08012;}

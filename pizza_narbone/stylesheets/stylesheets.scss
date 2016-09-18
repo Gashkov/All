@@ -1,0 +1,344 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0;	padding: 0;	border: 0; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section { display: block;
+}
+body {
+	font-family:'Steinem-Regular';
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+.clearfix {
+	clear: both;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face {
+	font-family:'Steinem-Bold';
+	src: url('Steinem-Bold_gdi.eot');
+	src: url('Steinem-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('Steinem-Bold_gdi.woff') format('woff'),
+		url('Steinem-Bold_gdi.ttf') format('truetype'),
+		url('Steinem-Bold_gdi.svg#Steinem-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2122;
+}
+@font-face {
+	font-family:'Steinem-Regular';
+	src: url('Steinem_gdi.eot');
+	src: url('Steinem_gdi.eot?#iefix') format('embedded-opentype'),
+		url('Steinem_gdi.woff') format('woff'),
+		url('Steinem_gdi.ttf') format('truetype'),
+		url('Steinem_gdi.svg#Steinem-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2122;
+}
+.slide {
+	background: #eae9eb;
+}
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.desctop {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+.desctop img {
+	width: 100%;
+}
+/*Slider finish*/
+
+/* Start more block */
+.more {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 35px;
+}
+.more__elem {
+	width: 50%;
+	float: left;
+	height: 292px;
+}
+.more__elem-block {
+	height: 292px;
+	width: 97%;
+}
+.more__elem_search {
+	background: url(../images/search-background.jpg) 50% 50%;
+	background-size: 100% 100%;
+}
+.more__elem_shipping {
+	background: url(../images/shipping-background.jpg) 50% 50%;
+	background-size: 100% 100%;
+	float: right;
+}
+.more__elem-title {
+	color: #93183a;
+	font-size: 30px;
+	width: 48%;
+	margin: 0 auto;
+	padding-top: 80px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.5;
+}
+.more__elem-button {
+	width: 170px;
+	border-radius: 5px;
+	display: block;
+	background: #93183a;
+	color: #fff;
+	padding: 17px 0;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 auto;
+	margin-top: 25px;
+	font-family:'Steinem-Bold';
+	font-size: 14px;
+}
+.more__elem-button:hover {
+	text-decoration: underline;
+}
+/* Finish block more*/
+
+/* Start block more-blog*/
+.more__blog {
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+.more__blog_img {
+	display: block;
+	margin: 0 auto;
+}
+.more__blog_second {
+	float: right;
+}
+.more__blog_sale {
+	display: block;
+	position: absolute;
+	left: 70.5%;
+  top: -15px;
+}
+.more__content {
+	width: 94.5%;
+}
+.more__content-title {
+	font-family:'Steinem-Bold';
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #4e4f53;
+	margin: 12px 0 15px 0;
+}
+.more__content-subtitle {
+	font-family:'Steinem-Bold';
+	font-size: 20px;
+	color: #4e4f53;
+	margin-bottom: 20px;
+}
+.more__content-main {
+	color: #7f8187;
+	line-height: 1.4;
+}
+.more__content-button {
+	font-family:'Steinem-Bold';	
+	color: #93183a;
+	display: inline-block;
+	margin-top: 5px;
+	text-decoration: none;
+}
+.more__content-button:hover {
+	text-decoration: underline;
+}
+.more__content_montagon {
+	margin: 0 auto;
+	margin-top: 12px;
+}
+.more__content-subtitle_bottom {
+	margin-bottom: 8px;
+}
+.more__content_descritpio {
+	float: right;
+	margin-top: 12px;
+}
+/* Finish block more*/
+/* Start block map */
+.map {
+	padding-top: 30px;
+}
+.more__info {
+	width: 31.6%;
+	background: #d6d7dc;
+}
+.more__info-title {
+	font-family:'Steinem-Bold';
+	font-size: 24px;
+	color: #4e4f53;
+	text-transform: uppercase;
+	padding: 18px 0 20px 24px;
+}
+.more__info-adress {
+	color: #7f8187;
+	width: 50%;
+	margin-left: 24px;
+	line-height: 1.5;
+}
+.more__info-phone	{
+	color: #7cac3e;
+	display: inline-block;
+	margin: 8px 0 22px 24px;
+}
+.more__info-open {
+	text-transform: uppercase;
+	
+}
