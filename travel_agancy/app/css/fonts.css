@@ -1,0 +1,24 @@
+@font-face {
+    font-family:'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+000D-FB02;
+}
+@font-face {
+    font-family:'Old Standard TT';
+    src: url('../fonts/Old Standard TT Regular.eot');
+    src: url('../fonts/Old Standard TT Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Old Standard TT Regular.woff2') format('woff2'),
+        url('../fonts/Old Standard TT Regular.woff') format('woff'),
+        url('../fonts/Old Standard TT Regular.svg#Old Standard TT Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-1D516;
+}

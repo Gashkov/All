@@ -1,0 +1,81 @@
+html, body { margin: 0; padding: 0; font-family:'Old Standard TT'; }
+.wrapper {
+  background: url(../images/1.jpeg) 50% 50% no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+.list {
+  display: inline-block;
+  margin: 0; 
+  padding: 0;
+  border-left: 3px solid #757e86;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.list li {
+  width: 52px;
+  height: 50px;
+  list-style-type: none;
+  background: rgba(0,0,0,0.75);
+  border: 1px solid #757e86;
+}
+.list a {
+  display: block;
+}
+.list a i {
+  color: #fff;
+  padding: 18px;
+}
+.heart:hover {
+  background: #fed37f;
+  transition: 700ms;
+}
+.twitter:hover {
+  background: rgba(50,204,254,0.95);
+  transition: 700ms;
+}
+.facebook:hover {
+  background: rgba(59,89,152,0.95);
+  transition: 700ms;
+}
+.main {
+  width: 350px;
+  height: 350px;
+  background: rgba(255,255,255,0.93);
+  margin: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+.main:hover {
+  background: rgba(0,0,0,0.95);
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.title {
+  margin: 0;
+  text-align: center;
+  padding-top: 130px;
+  font-size: 45px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.subtitle {
+  text-align: center;
+  font-family:'Montserrat';
+  font-size: 22px;
+  -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
