@@ -1,0 +1,149 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        .gameField {
+            width: 400px;
+            height: 500px;
+            /*border: 3px solid #ccc;*/
+            font-size: 0;
+            line-height: 0;
+            background-color: #000;
+            box-sizing: border-box;
+        }
+
+        .gameSection {
+            width: 25%;
+            height: 20%;
+            border: 1px solid white;
+
+            display: inline-block;
+            margin: 0;
+            box-sizing: border-box;
+            /*padding: 10px;*/
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<div class="gameField">
+    <div id="1" class="gameSection" onclick="func()"></div>
+    <div id="2" class="gameSection" onclick="func()"></div>
+    <div id="3" class="gameSection" onclick="func()"></div>
+    <div id="4" class="gameSection" onclick="func()"></div>
+    <div id="5" class="gameSection" onclick="func()"></div>
+    <div id="6" class="gameSection" onclick="func()"></div>
+    <div id="7" class="gameSection" onclick="func()"></div>
+    <div id="8" class="gameSection" onclick="func()"></div>
+    <div id="9" class="gameSection" onclick="func()"></div>
+    <div id="10" class="gameSection" onclick="func()"></div>
+    <div id="11" class="gameSection" onclick="func()"></div>
+    <div id="12" class="gameSection" onclick="func()"></div>
+    <div id="13" class="gameSection" onclick="func()"></div>
+    <div id="14" class="gameSection" onclick="func()"></div>
+    <div id="15" class="gameSection" onclick="func()"></div>
+    <div id="16" class="gameSection" onclick="func()"></div>
+    <div id="17" class="gameSection" onclick="func()"></div>
+    <div id="18" class="gameSection" onclick="func()"></div>
+    <div id="19" class="gameSection" onclick="func()"></div>
+    <div id="20" class="gameSection" onclick="func()"></div>
+
+</div>
+
+</body>
+</html>
+
+<script>
+
+    //Поскольку встроенной в ядро JavaScript нету аналога PHP функции shuffle, которая перемешивает элементы массива в случайном порядке,
+    //то добавляем в Array.prototype новое свойство в виде функции shuffle с нужной реализацией.
+    //Это нужно для того чтобы каждый раз картинки генерились в случайном порядке в плане своих позиций.
+    Array.prototype.shuffle = function( b ) {
+        var i = this.length, j, t;
+        while( i ) {
+            j = Math.floor( ( i-- ) * Math.random() );
+            t = b && typeof this[i].shuffle!=='undefined' ? this[i].shuffle() : this[i];
+            this[i] = this[j];
+            this[j] = t;
+        }
+        return this;
+    };
+
+    //Этот массив нужен что бы к URL по которым лежат картинки дописывать их числовой идентификатор
+    //У нас есть 10 разных картинок с идентификаторами от 0 до 9. Каждой картинки в игре должно быть по 2 штуки.
+    //При целочисленном делении всех чисел от 0 до 19 на 2 - мы получим 10 целочисленных значений от 0 до 10,
+    // которые будут встречаться по 2 раза и будут перемешаны в случайном порядке.
+    var mas = new Array(0, 1, 2, 3, 4, 5, 6, 7 ,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19);
+    mas.shuffle();
+    for (var i = 0; i < 20; i++) {
+        mas[i] = parseInt(mas[i] / 2);
+    }
+
+    //Оассив текущего состояния клика. Он хранит либо 0 элементов, либо один открытый элемет либо 2 элемента
+    var current = [];
+
+    //Использовал для того что бы определять, нужно ли удалять картинку с указанных в массиве позиций в случае, если они указывают на разные элементы.
+    //Ну типо, если элементы совпали и отрисовались "птички" в качестве картинок - то их конечно не удаляем. Если отрисованы 2 несовпадающие картинки то удаляем при открытии третей.
+    var flag = 1;
+
+    //Функция которая вызывается пр иклике на любой блок, тут мы колдуем =)
+    function img() {
+        if(this.children.length == 0) {
+            var image = document.createElement('img');
+            image.setAttribute('src', 'https://kde.link/test/' + mas[this.id - 1] + '.png');
+            image.setAttribute('width', '101%');
+            image.setAttribute('height', '101%');
+            image.setAttribute('style', 'font-size: 0; box-sizing: border-box; border: none');
+            this.appendChild(image);
+
+            if(current.length == 0) {
+                current[0] = this.id;
+            }
+            else if(current.length == 1) {
+                current[1] = this.id
+                flag = 1;
+                if (mas[this.id - 1] == mas[current[0] - 1]) {
+                    flag = 0;
+                    var image = document.createElement('img');
+                    image.setAttribute('src', 'checked.png');
+                    image.setAttribute('width', '101%');
+                    image.setAttribute('height', '101%');
+
+
+                    var image1 = document.createElement('img');
+                    image1.setAttribute('src', 'checked.png');
+                    image1.setAttribute('width', '101%');
+                    image1.setAttribute('height', '101%');
+
+                    this.removeChild(this.children[0]);
+                    this.appendChild(image);
+                    document.getElementById(current[0] + "").removeChild(document.getElementById(current[0] + "").children[0]);
+                    document.getElementById(current[0] + "").appendChild(image1);
+
+                }
+
+            }
+            else if(current.length == 2) {
+                if(flag) {
+                    document.getElementById(current[0] + "").removeChild(document.getElementById(current[0] + "").children[0]);
+                    document.getElementById(current[1] + "").removeChild(document.getElementById(current[1] + "").children[0]);
+                }
+                current.splice(0, 2, this.id);
+            }
+        }
+    }
+
+
+    var gameSections = document.body.getElementsByClassName("gameSection").length;
+
+    //Присваиваем функцию кажому блоку, что бы когда она вызывалась на нем - мы могли получать доступ к ID через this.
+    for(var i = 1; i < gameSections + 1; i++) {
+        document.getElementById(i + "").func = img;
+    }
+
+</script>
