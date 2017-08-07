@@ -1,2 +1,2 @@
-# All project from upwork 
+# All projects from upwork 
 # and some any tests 
