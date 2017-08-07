@@ -1,0 +1,48 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: lightgrey;
+}
+.main {
+	position: relative;
+}
+.circles {
+	width: 100%;
+}
+.text {
+	font-family: Arial;
+	width: 45%;
+	position: absolute;
+	top: 45%;
+	right: 0;
+	left: 25%;
+	margin: 0 auto;
+}
+@media (max-width: 1050px) {
+	.main {
+		background: url(circles.png) center / cover no-repeat;
+		height: 100vh;
+	}
+	.circles {
+		display: none;
+	}
+	.text {
+		width: 55%;
+		left: 30%;
+	}
+}
+@media (max-width: 600px) {
+	.text {
+		left: 0;
+		width: 80%;
+		text-align: center;
+	}
+}	
+@media (max-width: 400px) {
+	.text {
+		font-size: 13px;
+		top: 43%;
+	}
+}
